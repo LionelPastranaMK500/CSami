@@ -1,0 +1,97 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+h1,
+h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    font-family: 'Georgia', serif;
+    color: #d63384;
+    /* un rosa elegante */
+}
+
+section img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.enmarcado-magico {
+    border: 15px solid #5a3e2b; /* marrón oscuro para simular madera envejecida */
+    border-radius: 10px; /* bordes ligeramente redondeados */
+    padding: 15px;
+    background-color: #3e2a1f; /* marrón más oscuro para el fondo interno */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.5); /* sombras para profundidad */
+    background-image: linear-gradient(45deg, #5a3e2b 25%, #3e2a1f 25%, #3e2a1f 50%, #5a3e2b 50%, #5a3e2b 75%, #3e2a1f 75%);
+    background-size: 20px 20px; /* textura sutil para simular vetas de madera */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rosa-chicle {
+    background-color: #f8c8dc !important; /* Color rosa chicle */
+}
+.texto-grande {
+    font-size: 2.5rem; /* Tamaño grande, similar a un h1 */
+    font-weight: bold; /* Negrita para mayor énfasis */
+}
+.stars {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.stars.left {
+    left: -1.5rem;
+}
+
+.stars.right {
+    right: -1.5rem;
+}
+
+.big-star {
+    font-size: 4rem;
+    color: gold;
+    text-shadow:
+        0 0 10px #ffd700,
+        0 0 20px #ffcc00,
+        0 0 30px #ff9900,
+        0 0 40px #ffcc00;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.glow {
+    animation: shine 2s infinite alternate;
+}
+
+@keyframes shine {
+    from {
+        text-shadow:
+            0 0 10px #ffd700,
+            0 0 20px #ffcc00,
+            0 0 30px #ff9900,
+            0 0 40px #ffcc00;
+    }
+    to {
+        text-shadow:
+            0 0 20px #fff700,
+            0 0 30px #ffe600,
+            0 0 40px #ffcc00,
+            0 0 60px #ffa500;
+    }
+}
+
+/* Opcional: oculta las estrellas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .stars {
+        display: none;
+    }
+}
